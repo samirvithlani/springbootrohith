@@ -43,4 +43,9 @@ public class BugDao {
 				bugBean.getbDescription(), bugBean.getbTime());
 	}
 
+	public int deleteBug(int bId) {
+
+		return jdbcTemplate.update("delete from bug where bid = ?", bId);
+	}
+
 }
